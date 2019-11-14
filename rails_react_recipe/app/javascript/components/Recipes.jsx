@@ -21,7 +21,6 @@ class Recipes extends React.Component {
       .then(response => this.setState({ recipes: response }))
       .catch(() => this.props.history.push("/"));
   }
-
   render() {
     const { recipes } = this.state;
     const allRecipes = recipes.map((recipe, index) => (
@@ -44,7 +43,7 @@ class Recipes extends React.Component {
     const noRecipe = (
       <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
         <h4>
-          No recipes yet. Why not <Link to="/new_recipe">create one?</Link>
+          No recipes yet. Why not <Link to="/new_recipe">create one</Link>
         </h4>
       </div>
     );
@@ -79,6 +78,5 @@ class Recipes extends React.Component {
       </>
     );
   }
-
 }
 export default Recipes;
